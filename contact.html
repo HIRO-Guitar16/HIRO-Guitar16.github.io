@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Shippori+Mincho:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<title>お問い合わせ | HIRO · Acoustic Guitar</title>
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F9F6F1;--surface:#FFFFFF;--hero-bg:#4A4035;
+  --accent:#C8A870;--accent-em:#E8C898;--accent-dark:#8A6830;
+  --text:#1E1A14;--muted:#8A7D6A;--hint:#BFB5A5;--border:#E2D9CC;--sand:#EEE8DE;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.75}
+nav{background:rgba(249,246,241,0.97);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:62px;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;letter-spacing:0.15em;color:var(--text);text-decoration:none;display:block}
+.logo em{color:var(--accent-dark);font-style:normal}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:12px;letter-spacing:0.08em;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text);border-bottom:1px solid var(--accent-dark);padding-bottom:2px}
+.page-hero{background:var(--hero-bg);padding:3.5rem 2.5rem;position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(200,168,112,0.2)}
+.page-hero-tag{font-size:10px;letter-spacing:0.4em;color:var(--accent);text-transform:uppercase;margin-bottom:0.75rem}
+.page-hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:#F5EFE5;letter-spacing:0.05em}
+.section-wrap{padding:4.5rem 2.5rem;max-width:960px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:0.35em;color:var(--accent-dark);text-transform:uppercase;margin-bottom:0.5rem;font-family:'Cormorant Garamond',serif}
+.sec-title{font-family:'Shippori Mincho',serif;font-size:1.85rem;font-weight:500;color:var(--text);letter-spacing:0.04em;margin-bottom:0.5rem}
+.rule{width:32px;height:1px;background:var(--accent);opacity:0.6;margin:0.8rem 0 2.25rem}
+footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;font-size:11px;letter-spacing:0.12em;border-top:1px solid rgba(255,255,255,0.06)}
+@media(max-width:640px){
+  nav{padding:0 1.5rem}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:11px}
+  .section-wrap{padding:3rem 1.5rem}
+  .page-hero{padding:2.5rem 1.5rem}
+}
+
+.contact-inner{max-width:620px}
+.contact-intro{font-size:14px;color:var(--muted);line-height:1.95;margin-bottom:2.5rem}
+.f-label{display:block;font-size:10px;letter-spacing:0.15em;color:var(--accent-dark);margin-bottom:0.45rem;opacity:0.9}
+.f-group{margin-bottom:1.25rem}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.f-group input,.f-group select,.f-group textarea{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);padding:0.72rem 1rem;font-family:'Noto Sans JP',sans-serif;font-size:14px;border-radius:2px;outline:none;transition:border-color 0.2s}
+.f-group input::placeholder,.f-group textarea::placeholder{color:var(--hint)}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--accent)}
+.f-group select option{background:var(--surface);color:var(--text)}
+.f-group textarea{resize:vertical;min-height:120px}
+.f-btn{padding:0.88rem 3rem;background:var(--accent-dark);border:none;color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:14px;letter-spacing:0.15em;cursor:pointer;border-radius:2px;margin-top:0.5rem;transition:background 0.3s}
+.f-btn:hover{background:#6A5020}
+.sns-note{margin-top:2.5rem;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-left:2.5px solid var(--accent);border-radius:3px;font-size:13px;color:var(--muted);line-height:1.9}
+.sns-note strong{color:var(--text);font-weight:500}
+.sns-note a{color:var(--accent-dark);text-decoration:none}
+.sns-note a:hover{text-decoration:underline}
+@media(max-width:640px){.f-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">HIRO <em>·</em> Acoustic Guitar</a>
+  <ul class="nav-links">
+    <li><a href="lesson.html">レッスン</a></li>
+    <li><a href="tabs.html">TAB譜</a></li>
+    <li><a href="youtube.html">動画・SNS</a></li>
+    <li><a href="about.html">プロフィール</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-tag">Contact</div>
+  <h1>お問い合わせ</h1>
+</div>
+<div class="section-wrap">
+  <div class="contact-inner">
+    <p class="contact-intro">レッスンのご質問、体験レッスンのお申し込みなど、お気軽にご連絡ください。通常1〜2日以内にご返信します。</p>
+    <div class="f-row">
+      <form action="https://formspree.io/f/mwvdjqwn" method="POST">
+  <div class="f-group"><label class="f-label">お名前</label><input type="text" name="お名前" placeholder="山田 太郎" required></div>
+      <div class="f-group"><label class="f-label">メールアドレス</label><input type="email" name="メールアドレス" placeholder="your@email.com" required></div>
+    </div>
+    <div class="f-group">
+      <label class="f-label">お問い合わせ種別</label>
+      <select name="お問い合わせ種別" required>
+        <option value="">選択してください</option>
+        <option>体験レッスン申し込み（無料・30分）</option>
+        <option>レッスンについて</option>
+        <option>その他</option>
+      </select>
+    </div>
+    <div class="f-group"><label class="f-label">メッセージ</label><textarea name="メッセージ" placeholder="ご質問・ご要望などお気軽にどうぞ"></textarea></div>
+    <button type="submit" class="f-btn">送信する</button>
+</form>
+    <div class="sns-note">
+      <strong>SNSからもお気軽に</strong><br>
+      <a href="https://www.instagram.com/guitarkokoro" target="_blank">Instagram</a> または
+      <a href="https://www.tiktok.com/@guitarkokoro" target="_blank">TikTok</a> のDMからもご連絡いただけます。
+    </div>
+  </div>
+</div>
+<footer>© 2025 HIRO · Acoustic Guitar. All rights reserved.</footer>
+
+<script>
+const form = document.querySelector('form');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const res = await fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+  if (res.ok) {
+    form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div style="font-family:Shippori Mincho,serif;font-size:1.4rem;color:#1E1A14;margin-bottom:1rem;">送信できました！</div><p style="font-size:13px;color:#8A7D6A;line-height:1.9;">お問い合わせありがとうございます。<br>1〜2日以内にご返信いたします。</p></div>';
+  } else {
+    alert('送信に失敗しました。時間をおいて再度お試しください。');
+  }
+});
+</script>
+</body>
+</html>

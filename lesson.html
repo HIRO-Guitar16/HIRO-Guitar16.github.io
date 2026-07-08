@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Shippori+Mincho:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<title>レッスン | HIRO · Acoustic Guitar</title>
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F9F6F1;--surface:#FFFFFF;--hero-bg:#4A4035;
+  --accent:#C8A870;--accent-em:#E8C898;--accent-dark:#8A6830;
+  --text:#1E1A14;--muted:#8A7D6A;--hint:#BFB5A5;--border:#E2D9CC;--sand:#EEE8DE;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.75}
+nav{background:rgba(249,246,241,0.97);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:62px;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;letter-spacing:0.15em;color:var(--text);text-decoration:none;display:block}
+.logo em{color:var(--accent-dark);font-style:normal}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:12px;letter-spacing:0.08em;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text);border-bottom:1px solid var(--accent-dark);padding-bottom:2px}
+.page-hero{background:var(--hero-bg);padding:3.5rem 2.5rem;position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(200,168,112,0.2)}
+.page-hero-tag{font-size:10px;letter-spacing:0.4em;color:var(--accent);text-transform:uppercase;margin-bottom:0.75rem}
+.page-hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:#F5EFE5;letter-spacing:0.05em}
+.section-wrap{padding:4.5rem 2.5rem;max-width:960px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:0.35em;color:var(--accent-dark);text-transform:uppercase;margin-bottom:0.5rem;font-family:'Cormorant Garamond',serif}
+.sec-title{font-family:'Shippori Mincho',serif;font-size:1.85rem;font-weight:500;color:var(--text);letter-spacing:0.04em;margin-bottom:0.5rem}
+.rule{width:32px;height:1px;background:var(--accent);opacity:0.6;margin:0.8rem 0 2.25rem}
+footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;font-size:11px;letter-spacing:0.12em;border-top:1px solid rgba(255,255,255,0.06)}
+@media(max-width:640px){
+  nav{padding:0 1.5rem}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:11px}
+  .section-wrap{padding:3rem 1.5rem}
+  .page-hero{padding:2.5rem 1.5rem}
+}
+
+.lesson-intro{font-size:14px;color:var(--muted);max-width:580px;line-height:1.95;margin-bottom:2.5rem}
+.lesson-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem}
+.l-card{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:2rem 1.75rem;transition:box-shadow 0.2s,border-color 0.2s}
+.l-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.07);border-color:var(--accent)}
+.l-card.featured{border-color:rgba(200,168,112,0.5)}
+.l-badge{display:inline-block;font-size:10px;letter-spacing:0.08em;background:var(--accent-dark);color:#fff;padding:3px 11px;border-radius:20px;margin-bottom:1rem}
+.l-badge.free{background:#9A8870}
+.l-card h3{font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--text);margin-bottom:0.5rem;font-weight:500}
+.l-card p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:1.25rem}
+.l-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--accent-dark);font-weight:500}
+.l-price small{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--hint);margin-left:5px;font-weight:300}
+.flow-title{font-family:'Shippori Mincho',serif;font-size:1.3rem;color:var(--text);margin-bottom:1.5rem;font-weight:500}
+.flow-list{list-style:none;max-width:560px}
+.flow-list li{display:flex;gap:1.25rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border)}
+.flow-list li:last-child{border-bottom:none}
+.flow-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--accent);font-weight:500;flex-shrink:0;width:28px}
+.flow-text h4{font-size:14px;color:var(--text);font-weight:500;margin-bottom:3px}
+.flow-text p{font-size:13px;color:var(--muted);line-height:1.7}
+.apply-note{background:var(--surface);border:1px solid var(--border);border-left:2.5px solid var(--accent);border-radius:3px;padding:1.5rem 1.75rem;font-size:13px;color:var(--muted);line-height:1.95;margin-top:2.5rem}
+.apply-note strong{color:var(--text);font-weight:500}
+.apply-note a{color:var(--accent-dark);text-decoration:none}
+.apply-note a:hover{text-decoration:underline}
+.cta-wrap{text-align:center;margin-top:3rem;padding:3rem 2rem;background:var(--surface);border:1px solid var(--border);border-radius:3px}
+.cta-wrap p{font-size:14px;color:var(--muted);margin-bottom:1.5rem}
+.cta-btn{display:inline-block;background:var(--accent-dark);color:#fff;padding:0.9rem 2.5rem;font-size:13px;letter-spacing:0.14em;border-radius:2px;text-decoration:none;transition:background 0.2s}
+.cta-btn:hover{background:#6A5020}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">HIRO <em>·</em> Acoustic Guitar</a>
+  <ul class="nav-links">
+    <li><a href="lesson.html">レッスン</a></li>
+    <li><a href="tabs.html">TAB譜</a></li>
+    <li><a href="youtube.html">動画・SNS</a></li>
+    <li><a href="about.html">プロフィール</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-tag">Lesson</div>
+  <h1>レッスン</h1>
+</div>
+<div class="section-wrap">
+  <p class="lesson-intro">オンライン個人レッスンです。弾き語りからソロギターまで、あなたのペースに合わせて丁寧に指導します。初心者の方も、ブランクのある方も、ぜひお気軽にどうぞ。</p>
+  <div class="lesson-grid">
+    <div class="l-card">
+      <div class="l-badge free">無料</div>
+      <h3>体験レッスン</h3>
+      <p>まずは気軽に。30分で雰囲気を体験できます。どんな質問もOKです。</p>
+      <div class="l-price">¥0<small>/ 30分</small></div>
+    </div>
+    <div class="l-card">
+      <h3>30分コース</h3>
+      <p>短い時間で集中して取り組みたい方に。ポイントを絞って効率よく学べます。</p>
+      <div class="l-price">¥2,200<small>/ 30分</small></div>
+    </div>
+    <div class="l-card featured">
+      <div class="l-badge">人気</div>
+      <h3>45分コース</h3>
+      <p>じっくり取り組みたい方におすすめ。曲の仕上げや細かいニュアンスまで丁寧に。</p>
+      <div class="l-price">¥3,300<small>/ 45分</small></div>
+    </div>
+  </div>
+
+  <div class="flow-title">レッスンの流れ</div>
+  <ul class="flow-list">
+    <li>
+      <div class="flow-num">1</div>
+      <div class="flow-text">
+        <h4>お申し込み</h4>
+        <p>下記フォームまたはInstagram・TikTokのDMからご連絡ください。</p>
+      </div>
+    </li>
+    <li>
+      <div class="flow-num">2</div>
+      <div class="flow-text">
+        <h4>日程の調整</h4>
+        <p>ご希望の日時をお聞きして、スケジュールを確定します。</p>
+      </div>
+    </li>
+    <li>
+      <div class="flow-num">3</div>
+      <div class="flow-text">
+        <h4>Google Meetでレッスン</h4>
+        <p>URLをお送りします。パソコン・スマホどちらでも受講できます。</p>
+      </div>
+    </li>
+    <li>
+      <div class="flow-num">4</div>
+      <div class="flow-text">
+        <h4>お支払い</h4>
+        <p>レッスン後にお振込みをお願いします。</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="apply-note">
+    <strong>お申し込み方法</strong><br>
+    下記のお問い合わせフォームからお申し込みいただけます。<br>
+    <a href="https://www.instagram.com/guitarkokoro" target="_blank">Instagram</a> または
+    <a href="https://www.tiktok.com/@guitarkokoro" target="_blank">TikTok</a> のDMからもお気軽にご連絡ください。
+  </div>
+
+  <div class="cta-wrap">
+    <p>まずは無料の体験レッスンから。お気軽にどうぞ。</p>
+    <a href="contact.html" class="cta-btn">体験レッスンを申し込む（無料）</a>
+  </div>
+</div>
+<footer>© 2025 HIRO · Acoustic Guitar. All rights reserved.</footer>
+</body>
+</html>

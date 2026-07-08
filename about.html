@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Shippori+Mincho:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<title>About | HIRO · Acoustic Guitar</title>
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F9F6F1;--surface:#FFFFFF;--hero-bg:#4A4035;
+  --accent:#C8A870;--accent-em:#E8C898;--accent-dark:#8A6830;
+  --text:#1E1A14;--muted:#8A7D6A;--hint:#BFB5A5;--border:#E2D9CC;--sand:#EEE8DE;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.75}
+nav{background:rgba(249,246,241,0.97);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:62px;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;letter-spacing:0.15em;color:var(--text);text-decoration:none;display:block}
+.logo em{color:var(--accent-dark);font-style:normal}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:12px;letter-spacing:0.08em;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text);border-bottom:1px solid var(--accent-dark);padding-bottom:2px}
+.page-hero{background:var(--hero-bg);padding:3.5rem 2.5rem;position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(200,168,112,0.2)}
+.page-hero-tag{font-size:10px;letter-spacing:0.4em;color:var(--accent);text-transform:uppercase;margin-bottom:0.75rem}
+.page-hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:#F5EFE5;letter-spacing:0.05em}
+.section-wrap{padding:4.5rem 2.5rem;max-width:960px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:0.35em;color:var(--accent-dark);text-transform:uppercase;margin-bottom:0.5rem;font-family:'Cormorant Garamond',serif}
+.sec-title{font-family:'Shippori Mincho',serif;font-size:1.85rem;font-weight:500;color:var(--text);letter-spacing:0.04em;margin-bottom:0.5rem}
+.rule{width:32px;height:1px;background:var(--accent);opacity:0.6;margin:0.8rem 0 2.25rem}
+footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;font-size:11px;letter-spacing:0.12em;border-top:1px solid rgba(255,255,255,0.06)}
+@media(max-width:640px){
+  nav{padding:0 1.5rem}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:11px}
+  .section-wrap{padding:3rem 1.5rem}
+  .page-hero{padding:2.5rem 1.5rem}
+}
+
+.about-inner{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start}
+.about-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:3px;display:block}
+.about-photo-placeholder{width:100%;aspect-ratio:3/4;background:var(--sand);border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;color:var(--hint);border:1.5px dashed var(--border)}
+.about-photo-placeholder span{font-size:12px;letter-spacing:0.06em}
+.about-name-en{font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.2em;color:var(--hint);margin-bottom:0.8rem}
+.about-body{font-size:14px;color:var(--muted);line-height:2;margin-bottom:1.75rem}
+.about-body p+p{margin-top:1.25rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem}
+.about-tag{font-size:11px;padding:4px 12px;border:1px solid var(--border);border-radius:20px;color:var(--muted);letter-spacing:0.04em}
+
+
+
+
+@media(max-width:640px){
+  .about-inner{grid-template-columns:1fr;gap:2rem}
+  .about-photo-placeholder{aspect-ratio:4/3}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">HIRO <em>·</em> Acoustic Guitar</a>
+  <ul class="nav-links">
+    <li><a href="lesson.html">レッスン</a></li>
+    <li><a href="tabs.html">TAB譜</a></li>
+    <li><a href="youtube.html">動画・SNS</a></li>
+    <li><a href="about.html">プロフィール</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-tag">Profile</div>
+  <h1>About HIRO</h1>
+</div>
+<div class="section-wrap">
+  <div class="about-inner">
+    <div>
+      <!-- ★ about.jpg を同じフォルダに置いてください ★ -->
+      <img class="about-photo" src="about.jpg" alt="HIRO"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="about-photo-placeholder" style="display:none;">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>写真をここに</span>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">Profile</div>
+      <h2 class="sec-title">About HIRO</h2>
+      
+      <div class="rule"></div>
+      <div class="about-body">
+        <p>1996年生まれ。12歳よりギターを始め、ソロギターの世界へ。オープンチューニングを使ったフィンガースタイルを軸に、コード弾きや弾き語りまで幅広くカバー。三度の飯よりギターが好き。</p>
+        <p>大学時代にはレコーディングへの参加やプロギタリストのオープニングアクトを経験。在学中より岐阜県の音楽教室にてギター講師をスタートし、大学院進学後はFurchギター総代理店・スタジオMでも講師を務める。現在、講師歴11年。</p>
+      </div>
+      <div class="about-tags">
+        <span class="about-tag">オンラインレッスン</span>
+        <span class="about-tag">初心者大歓迎</span>
+        <span class="about-tag">弾き語り</span>
+        <span class="about-tag">ソロギター</span>
+        <span class="about-tag">フィンガースタイル</span>
+        <span class="about-tag">オープンチューニング</span>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<footer>© 2025 HIRO · Acoustic Guitar. All rights reserved.</footer>
+</body>
+</html>

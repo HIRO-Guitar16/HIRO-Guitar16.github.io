@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Shippori+Mincho:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<title>TAB譜 | HIRO · Acoustic Guitar</title>
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F9F6F1;--surface:#FFFFFF;--hero-bg:#4A4035;
+  --accent:#C8A870;--accent-em:#E8C898;--accent-dark:#8A6830;
+  --text:#1E1A14;--muted:#8A7D6A;--hint:#BFB5A5;--border:#E2D9CC;--sand:#EEE8DE;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.75}
+nav{background:rgba(249,246,241,0.97);border-bottom:1px solid var(--border);padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:62px;position:sticky;top:0;z-index:100;backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;letter-spacing:0.15em;color:var(--text);text-decoration:none;display:block}
+.logo em{color:var(--accent-dark);font-style:normal}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:12px;letter-spacing:0.08em;color:var(--muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text);border-bottom:1px solid var(--accent-dark);padding-bottom:2px}
+.page-hero{background:var(--hero-bg);padding:3.5rem 2.5rem;position:relative;overflow:hidden}
+.page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(200,168,112,0.2)}
+.page-hero-tag{font-size:10px;letter-spacing:0.4em;color:var(--accent);text-transform:uppercase;margin-bottom:0.75rem}
+.page-hero h1{font-family:'Shippori Mincho',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:#F5EFE5;letter-spacing:0.05em}
+.section-wrap{padding:4.5rem 2.5rem;max-width:960px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:0.35em;color:var(--accent-dark);text-transform:uppercase;margin-bottom:0.5rem;font-family:'Cormorant Garamond',serif}
+.sec-title{font-family:'Shippori Mincho',serif;font-size:1.85rem;font-weight:500;color:var(--text);letter-spacing:0.04em;margin-bottom:0.5rem}
+.rule{width:32px;height:1px;background:var(--accent);opacity:0.6;margin:0.8rem 0 2.25rem}
+footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;font-size:11px;letter-spacing:0.12em;border-top:1px solid rgba(255,255,255,0.06)}
+@media(max-width:640px){
+  nav{padding:0 1.5rem}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:11px}
+  .section-wrap{padding:3rem 1.5rem}
+  .page-hero{padding:2.5rem 1.5rem}
+}
+
+.tab-intro{font-size:14px;color:var(--muted);max-width:580px;line-height:1.95;margin-bottom:2.5rem}
+.coming-box{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:3.5rem 2rem;text-align:center;max-width:560px;margin:0 auto}
+.coming-eyebrow{font-size:10px;letter-spacing:0.3em;color:var(--hint);text-transform:uppercase;margin-bottom:0.75rem}
+.coming-title{font-family:'Shippori Mincho',serif;font-size:1.6rem;color:var(--text);margin-bottom:0.75rem;font-weight:500}
+.coming-text{font-size:13px;color:var(--muted);line-height:1.9;margin-bottom:1.75rem}
+.piascore-btn{display:inline-flex;align-items:center;gap:8px;padding:0.85rem 2.2rem;background:var(--accent-dark);color:#fff;border-radius:2px;font-size:13px;letter-spacing:0.1em;text-decoration:none;transition:background 0.2s}
+.piascore-btn:hover{background:#6A5020}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="index.html">HIRO <em>·</em> Acoustic Guitar</a>
+  <ul class="nav-links">
+    <li><a href="lesson.html">レッスン</a></li>
+    <li><a href="tabs.html">TAB譜</a></li>
+    <li><a href="youtube.html">動画・SNS</a></li>
+    <li><a href="about.html">プロフィール</a></li>
+    <li><a href="contact.html">お問い合わせ</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <div class="page-hero-tag">TABs &amp; Note</div>
+  <h1>TAB譜・解説動画</h1>
+</div>
+<div class="section-wrap">
+  <p class="tab-intro">オリジナルアレンジのTAB譜をPiascoreにて、解説動画をnoteにて販売しています。楽譜と動画をセットで使えば、より効率よく曲を仕上げられます。</p>
+  <div class="coming-box">
+    <div class="coming-eyebrow">Coming Soon</div>
+    <div class="coming-title">準備中です</div>
+    <p class="coming-text">TAB譜は現在制作中です。<br>Piascoreのストアページで順次公開予定です。<br>公開をお楽しみに。</p>
+    <!-- ★ PiascoreのURLに変えてください ★ -->
+    <a href="https://piascore.com" target="_blank" class="piascore-btn">Piascoreで見る →</a>
+  
+  <!-- NOTE セクション -->
+  <div style="margin-top:2.5rem;">
+    <div class="eyebrow" style="margin-top:0;">Note</div>
+    <h3 style="font-family:'Shippori Mincho',serif;font-size:1.4rem;font-weight:500;color:var(--text);margin-bottom:0.5rem;letter-spacing:0.04em;">解説動画</h3>
+    <div class="rule"></div>
+    <div class="coming-box">
+      <div class="coming-eyebrow">Coming Soon</div>
+      <div class="coming-title">準備中です</div>
+      <p class="coming-text">TAB譜の解説動画をnoteにて順次公開予定です。<br>楽譜と合わせてご活用ください。</p>
+      <!-- ★ noteのURLに変えてください ★ -->
+      <a href="https://note.com/guitar_kokoro" target="_blank" class="piascore-btn">noteで見る →</a>
+    </div>
+  </div>
+</div>
+</div>
+<footer>© 2025 HIRO · Acoustic Guitar. All rights reserved.</footer>
+</body>
+</html>

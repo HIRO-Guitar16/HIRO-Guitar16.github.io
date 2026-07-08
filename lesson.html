@@ -56,14 +56,15 @@ footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;fon
 
 .lesson-intro{font-size:14px;color:var(--muted);max-width:580px;line-height:1.95;margin-bottom:2.5rem}
 .lesson-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem}
-.l-card{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:2rem 1.75rem;transition:box-shadow 0.2s,border-color 0.2s}
+.l-card{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:2rem 1.75rem;transition:box-shadow 0.2s,border-color 0.2s;display:flex;flex-direction:column}
+.l-badge-wrap{height:28px;display:flex;align-items:center;margin-bottom:0.9rem}
 .l-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.07);border-color:var(--accent)}
 .l-card.featured{border-color:rgba(200,168,112,0.5)}
 .l-badge{display:inline-block;font-size:10px;letter-spacing:0.08em;background:var(--accent-dark);color:#fff;padding:3px 11px;border-radius:20px;margin-bottom:1rem}
 .l-badge.free{background:#9A8870}
 .l-card h3{font-family:'Shippori Mincho',serif;font-size:1.2rem;color:var(--text);margin-bottom:0.5rem;font-weight:500}
 .l-card p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:1.25rem}
-.l-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--accent-dark);font-weight:500}
+.l-price{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--accent-dark);font-weight:500;margin-top:auto}
 .l-price small{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--hint);margin-left:5px;font-weight:300}
 .flow-title{font-family:'Shippori Mincho',serif;font-size:1.3rem;color:var(--text);margin-bottom:1.5rem;font-weight:500}
 .flow-list{list-style:none;max-width:560px}
@@ -104,18 +105,19 @@ footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;fon
   <p class="lesson-intro">オンライン個人レッスンです。弾き語りからソロギターまで、あなたのペースに合わせて丁寧に指導します。初心者の方も、ブランクのある方も、ぜひお気軽にどうぞ。</p>
   <div class="lesson-grid">
     <div class="l-card">
-      <div class="l-badge free">無料</div>
+      <div class="l-badge-wrap"><div class="l-badge free">無料</div></div>
       <h3>体験レッスン</h3>
-      <p>まずは気軽に。30分で雰囲気を体験できます。どんな質問もOKです。</p>
+      <p>気軽にレッスンの雰囲気を体験できます。継続してレッスンをご希望の場合は、目標や習得したいことをお聞きして一緒に方針を決めていきます。</p>
       <div class="l-price">¥0<small>/ 30分</small></div>
     </div>
     <div class="l-card">
+      <div class="l-badge-wrap"></div>
       <h3>30分コース</h3>
-      <p>短い時間で集中して取り組みたい方に。ポイントを絞って効率よく学べます。</p>
+      <p>気軽に始めたい方や、忙しい方に。</p>
       <div class="l-price">¥2,200<small>/ 30分</small></div>
     </div>
     <div class="l-card featured">
-      <div class="l-badge">人気</div>
+      <div class="l-badge-wrap"><div class="l-badge">人気</div></div>
       <h3>45分コース</h3>
       <p>じっくり取り組みたい方におすすめ。曲の仕上げや細かいニュアンスまで丁寧に。</p>
       <div class="l-price">¥3,300<small>/ 45分</small></div>
@@ -149,7 +151,7 @@ footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;fon
       <div class="flow-num">4</div>
       <div class="flow-text">
         <h4>お支払い</h4>
-        <p>レッスン後にお振込みをお願いします。</p>
+        <p>レッスン前に銀行振込またはPayPayにてお支払いをお願いします。</p>
       </div>
     </li>
   </ul>

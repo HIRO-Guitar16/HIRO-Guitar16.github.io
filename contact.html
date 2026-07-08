@@ -30,6 +30,22 @@ nav{background:rgba(249,246,241,0.97);border-bottom:1px solid var(--border);padd
 .sec-title{font-family:'Shippori Mincho',serif;font-size:1.85rem;font-weight:500;color:var(--text);letter-spacing:0.04em;margin-bottom:0.5rem}
 .rule{width:32px;height:1px;background:var(--accent);opacity:0.6;margin:0.8rem 0 2.25rem}
 footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;font-size:11px;letter-spacing:0.12em;border-top:1px solid rgba(255,255,255,0.06)}
+
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(249,246,241,0.98);border-bottom:1px solid var(--border);padding:1rem 2rem;gap:0;z-index:99;backdrop-filter:blur(8px)}
+  .nav-links.open{display:flex}
+  .nav-links li{border-bottom:1px solid var(--border)}
+  .nav-links li:last-child{border-bottom:none}
+  .nav-links a{display:block;padding:0.9rem 0;font-size:14px;letter-spacing:0.06em}
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--muted);border-radius:2px;transition:all 0.3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(min-width:769px){
+  .hamburger{display:none}
+}
 @media(max-width:640px){
   nav{padding:0 1.5rem}
   .nav-links{gap:1rem}
@@ -54,6 +70,22 @@ footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;fon
 .sns-note strong{color:var(--text);font-weight:500}
 .sns-note a{color:var(--accent-dark);text-decoration:none}
 .sns-note a:hover{text-decoration:underline}
+
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:fixed;top:62px;left:0;right:0;background:rgba(249,246,241,0.98);border-bottom:1px solid var(--border);padding:1rem 2rem;gap:0;z-index:99;backdrop-filter:blur(8px)}
+  .nav-links.open{display:flex}
+  .nav-links li{border-bottom:1px solid var(--border)}
+  .nav-links li:last-child{border-bottom:none}
+  .nav-links a{display:block;padding:0.9rem 0;font-size:14px;letter-spacing:0.06em}
+  .hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--muted);border-radius:2px;transition:all 0.3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(min-width:769px){
+  .hamburger{display:none}
+}
 @media(max-width:640px){.f-row{grid-template-columns:1fr}}
 </style>
 </head>
@@ -67,6 +99,9 @@ footer{background:#2A2018;color:var(--hint);text-align:center;padding:1.5rem;fon
     <li><a href="about.html">プロフィール</a></li>
     <li><a href="contact.html">お問い合わせ</a></li>
   </ul>
+  <button class="hamburger" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')" aria-label="メニュー">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="page-hero">
   <div class="page-hero-tag">Contact</div>
